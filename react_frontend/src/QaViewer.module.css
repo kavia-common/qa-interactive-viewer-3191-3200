@@ -1,0 +1,70 @@
+:root {
+  /* Q&A custom theme - matches style guide */
+  --qa-primary: #3b82f6;
+  --qa-success: #06b6d4;
+  --qa-secondary: #64748b;
+  --qa-error: #EF4444;
+  --qa-bg: #f9fafb;
+  --qa-surface: #ffffff;
+  --qa-text: #111827;
+}
+
+/* Style for scrollable Q&A list area */
+.qa-list-scroll {
+  max-height: 360px;
+  overflow-y: auto;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+/* Style for Q&A entry cards */
+.qa-card {
+  background: var(--qa-surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 7px 0 rgba(100, 116, 139, 0.07);
+  border: 1px solid var(--qa-secondary);
+  margin-bottom: 1.1rem;
+  padding: .8rem 1.1rem;
+  transition: box-shadow 0.15s;
+}
+.qa-card:last-child {
+  margin-bottom: 0;
+}
+
+.qa-question-btn {
+  background: var(--qa-primary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.73rem 1.05rem;
+  font-size: 1.06rem;
+  margin-bottom: 0.29rem;
+}
+.qa-question-btn:focus,
+.qa-question-btn:hover {
+  background: var(--qa-success);
+  color: #fff !important;
+  outline: none;
+}
+
+.qa-answer {
+  background: var(--qa-surface);
+  color: var(--qa-text);
+  border-radius: 4px;
+  margin-top: -.16rem;
+  padding: 0.9rem 0.8rem 0.5rem 1.3rem;
+  font-weight: 500;
+  font-size: 1.04rem;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .qa-card,
+  .qa-list-scroll {
+    padding: 1rem .2rem !important;
+  }
+}
